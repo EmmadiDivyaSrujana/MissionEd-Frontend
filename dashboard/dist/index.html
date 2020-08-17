@@ -1,0 +1,3438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CodePen - Dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+	<div class="main">
+		<div class="left">
+			<ul>
+				<li class="menu-heading">Dashboards</li>
+				<li><a data-toggle="tab" href="#overview"><i class="fa fa-book-reader fa-lg"></i> Subjects</a></li>
+				<li><a data-toggle="tab" href="#analytics"><i class="fa fa-lg fa-meh-blank"></i>Doubts</a></li>
+				<li><a data-toggle="tab" href="#landing"><i class="fa fa-lg fa-keyboard"></i>Blogs</a></li>
+				<li><a data-toggle="tab" href="#projects"><i class="fa fa-line-chart fa-lg"></i>Progress</a></li>
+				<li class="menu-heading">Pages</li>
+				<li class="active"><a data-toggle="tab" href="#user-profile"><i class="fa fa-street-view fa-lg"></i>
+						User
+						Profile
+					</a></li>
+				<li><a data-toggle="tab" href="#candidates"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+				<!--li><a data-toggle="tab" href="#invoices"><i class="fa fa-files-o fa-lg"></i>Update Plan</a></li-->
+				<li><a data-toggle="tab" href="#single-invoice"><i class="fa fa-info-circle fa-lg"></i> Help</a></li>
+				<!--li><a data-toggle="tab" href="#browse"><i class="fa fa-search fa-lg"></i> Bookmarks</a></li-->
+			</ul>
+		</div>
+		<div class="right">
+			<div class="tab-content">
+				<!-- Overview -->
+				<div id="overview" class="tab-pane fade">
+					<div class="header">
+						<h4>Account</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content center" style="min-height: 80vh;">
+						<div class="subjects-container center">
+							<h1>What would you like to learn today?</h1>
+							<div class="row graph-cards subjects">
+								<div class="col-md-6 col-lg-3 col-12">
+									<div class="card physics center" onclick="genCourseContent(0)">
+										<img src="../physics.png">
+										<h1 class="text-uppercase">physics</h1>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3 col-12">
+									<div class="card chemistry center" onclick="genCourseContent(1)">
+										<img src="../chemistry.png">
+										<h1>CHEMISTRY</h1>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3 col-12">
+									<div class="card maths center" onclick="genCourseContent(2)">
+										<img src="../maths.png">
+										<h1 class="text-uppercase">Mathematics</h1>
+									</div>
+								</div>
+								<div class="col-md-6 col-lg-3 col-12">
+									<div class="card biology center" onclick="genCourseContent(3)">
+										<img src="../bio.png">
+										<h1 class="text-uppercase">Biology</h1>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="physics-container" style="display: none;">
+							<button class="goback" onclick="genSubjects(0)">
+								<i class="fa fa-lg fa-arrow-circle-left"></i> Back to Subjects
+							</button>
+							<section class="container">
+								<section class="row">
+									<div class="col-sm-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">PHYSICS</div>
+											<div class="panel-body">
+												<div role="tabpanel">
+													<!-- Nav tabs -->
+													<ul id="myTab" class="nav nav-tabs" role="tablist">
+														<li role="presentation" class="active"><a href="#physics-questions"
+																aria-controls="physics-questions" role="tab"
+																data-toggle="tab">Questions</a></li>
+														<li role="presentation"><a href="#physics-notes"
+																aria-controls="physics-notes" role="tab"
+																data-toggle="tab">Notes</a></li>
+														<li role="presentation"><a href="#physics-solutions"
+																aria-controls="physics-solutions" role="tab"
+																data-toggle="tab">Solutions</a></li>
+													</ul>
+
+													<!-- Tab panes -->
+													<div class="tab-content">
+														<div role="tabpanel" class="tab-pane active" id="physics-questions">
+															<div class="question" style="margin-top: 20px;">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+															</div>
+														</div>
+														<div role="tabpanel" class="tab-pane" id="physics-notes">
+															<div class="row" style="margin-top: 50px;">
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Laws of Motion</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Fluid Mechanics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+															</div>
+															<div class="row" style="margin-top: 2%;">
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Laws of Motion</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Fluid Mechanics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div role="tabpanel" class="tab-pane" id="physics-solutions">
+															<div class="solution" style="margin-top: 50px;">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</section>
+						</div>
+						<div class="chemistry-container" style="display: none;">
+							<button class="goback" onclick="genSubjects(1)">
+								<i class="fa fa-arrow-circle-left fa-lg"></i> Back to Subjects
+							</button>
+							<section class="container">
+								<section class="row">
+									<div class="col-sm-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">CHEMISTRY</div>
+											<div class="panel-body">
+												<div role="tabpanel">
+													<!-- Nav tabs -->
+													<ul id="myTab" class="nav nav-tabs" role="tablist">
+														<li role="presentation" class="active"><a href="#chemistry-questions"
+																aria-controls="chemistry-questions" role="tab"
+																data-toggle="tab">Questions</a></li>
+														<li role="presentation"><a href="#chemistry-notes"
+																aria-controls="chemistry-notes" role="tab"
+																data-toggle="tab">Notes</a></li>
+														<li role="presentation"><a href="#chemistry-solutions"
+																aria-controls="chemistry-solutions" role="tab"
+																data-toggle="tab">Solutions</a></li>
+													</ul>
+
+													<!-- Tab panes -->
+													<div class="tab-content">
+														<div role="tabpanel" class="tab-pane active" id="chemistry-questions">
+															<div class="question" style="margin-top: 20px;">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+															</div>
+														</div>
+														<div role="tabpanel" class="tab-pane" id="chemistry-notes">
+															<div class="row" style="margin-top: 50px;">
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Laws of Motion</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Fluid Mechanics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+															</div>
+															<div class="row" style="margin-top: 2%;">
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Laws of Motion</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Fluid Mechanics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div role="tabpanel" class="tab-pane" id="chemistry-solutions">
+															<div class="solution" style="margin-top: 50px;">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</section>
+						</div>
+						<div class="maths-container" style="display: none;">
+							<button class="goback" onclick="genSubjects(2)">
+								<i class="fa fa-lg fa-arrow-circle-left"></i> Back to Subjects
+							</button>
+							<section class="container">
+								<section class="row">
+									<div class="col-sm-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">MATHEMATICS</div>
+											<div class="panel-body">
+												<div role="tabpanel">
+													<!-- Nav tabs -->
+													<ul id="myTab" class="nav nav-tabs" role="tablist">
+														<li role="presentation" class="active"><a href="#maths-questions"
+																aria-controls="maths-questions" role="tab"
+																data-toggle="tab">Questions</a></li>
+														<li role="presentation"><a href="#maths-notes"
+																aria-controls="maths-notes" role="tab"
+																data-toggle="tab">Notes</a></li>
+														<li role="presentation"><a href="#maths-solutions"
+																aria-controls="maths-solutions" role="tab"
+																data-toggle="tab">Solutions</a></li>
+													</ul>
+
+													<!-- Tab panes -->
+													<div class="tab-content">
+														<div role="tabpanel" class="tab-pane active" id="maths-questions">
+															<div class="question" style="margin-top: 20px;">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+															</div>
+														</div>
+														<div role="tabpanel" class="tab-pane" id="maths-notes">
+															<div class="row" style="margin-top: 50px;">
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Laws of Motion</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Fluid Mechanics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+															</div>
+															<div class="row" style="margin-top: 2%;">
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Laws of Motion</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Fluid Mechanics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div role="tabpanel" class="tab-pane" id="maths-solutions">
+															<div class="solution" style="margin-top: 50px;">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</section>
+						</div>
+						<div class="biology-container" style="display: none;">
+							<button class="goback" onclick="genSubjects(3)">
+								<i class="fa fa-lg fa-arrow-circle-left"></i> Back to Subjects
+							</button>
+							<section class="container">
+								<section class="row">
+									<div class="col-sm-12">
+										<div class="panel panel-default">
+											<div class="panel-heading">BIOLOGY</div>
+											<div class="panel-body">
+												<div role="tabpanel">
+													<!-- Nav tabs -->
+													<ul id="myTab" class="nav nav-tabs" role="tablist">
+														<li role="presentation" class="active"><a href="#biology-questions"
+																aria-controls="physics-questions" role="tab"
+																data-toggle="tab">Questions</a></li>
+														<li role="presentation"><a href="#biology-notes"
+																aria-controls="physics-notes" role="tab"
+																data-toggle="tab">Notes</a></li>
+														<li role="presentation"><a href="#biology-solutions"
+																aria-controls="physics-solutions" role="tab"
+																data-toggle="tab">Solutions</a></li>
+													</ul>
+
+													<!-- Tab panes -->
+													<div class="tab-content">
+														<div role="tabpanel" class="tab-pane active" id="biology-questions">
+															<div class="question" style="margin-top: 20px;">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+																<hr class="my-4">
+															</div>
+															<div class="question">
+																<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolore corrupti inventore iure sequi doloremque hic voluptatum, dolores praesentium? Ab consequuntur, eligendi cum quasi natus earum ducimus. Illo, ad ipsa.</p>
+															</div>
+														</div>
+														<div role="tabpanel" class="tab-pane" id="biology-notes">
+															<div class="row" style="margin-top: 50px;">
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Laws of Motion</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Fluid Mechanics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-2 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+															</div>
+															<div class="row" style="margin-top: 2%;">
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Laws of Motion</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Fluid Mechanics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Thermodynamics</h5>
+																	</div>
+																</div>
+																<div class="col-sm-3 center">
+																	<div class="card">
+																		<h5>Gravity</h5>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div role="tabpanel" class="tab-pane" id="biology-solutions">
+															<div class="solution" style="margin-top: 50px;">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+															<div class="solution">
+																<p><strong>Problem 1:</strong> Problem text lorem ipsum dolor sit amet.</p>
+																<a href="#">Click to Reveal solution</a>
+																<hr class="my-4">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</section>
+						</div>
+						<!--div class="row project-cards">
+							<div class="col-sm-3">
+								<div class="card">
+									<img src="https://bit.ly/2OXtcKC" alt="" />
+									<h5>Magazine Images <br> <small>Kinfolk | Last Update: 21 Dec 2016</small></h5>
+									<div class="row">
+										<div class="col-sm-6">
+											<h6>4,870 USD <br><small>Budget / Salary</small></h6>
+										</div>
+										<div class="col-sm-6">
+											<h6>Early Dec 2017 <br><small class="text-red">10 Days Remaining</small>
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="card">
+									<img src="https://bit.ly/2Ku2zc1" alt="" />
+									<h5>Design Competition 2018 <br> <small>Gourmet| Last Update: 29 Dec 2017</small>
+									</h5>
+									<div class="row">
+										<div class="col-sm-6">
+											<h6>9,680 USD <br><small>Budget / Salary</small></h6>
+										</div>
+										<div class="col-sm-6">
+											<h6>Late January <br><small class="text-red">Deadline</small></h6>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="card">
+									<img src="https://bit.ly/2ySk1Ai" alt="" />
+									<h5>New Dashboard <br> <small>Tapdaq | Last Update: 28 Nov 2017</small></h5>
+									<div class="row">
+										<div class="col-sm-6">
+											<h6>4,870 USD <br><small>Budget / Salary</small></h6>
+										</div>
+										<div class="col-sm-6">
+											<h6>Early Dec 2017 <br><small class="text-red">10 Days Remaining</small>
+											</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="card">
+									<img src="https://bit.ly/2MkaTNZ" alt="" />
+									<h5>Mobile App <br> <small>Cofee & Co. | Last Update: 1 Dec 2016</small></h5>
+									<div class="row">
+										<div class="col-sm-6">
+											<h6>8,760 USD <br><small>Budget / Salary</small></h6>
+										</div>
+										<div class="col-sm-6">
+											<h6>Early Dec 2017 <br><small class="text-red">6 Days Remaining</small></h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row invoice-task">
+							<div class="col-sm-6">
+								<div class="invoice">
+									<div class="table-responsive">
+										<table class="table">
+											<h5>Invoicing <small class="pull-right"><a href="#">View all
+														invoices</a></small></h5>
+											<tbody>
+												<tr>
+													<td>00450</td>
+													<td>Design Works</td>
+													<td>Carlson Limited</td>
+													<td><button class="btn btn-red btn-sm pull-right">DELAYED</button>
+													</td>
+													<td>$2,580</td>
+												</tr>
+												<tr>
+													<td>00569</td>
+													<td>New Illustrations</td>
+													<td>Twitter</td>
+													<td><button class="btn btn-warning btn-sm pull-right">PENDING
+															INVOICE</button></td>
+													<td>$3,130</td>
+												</tr>
+												<tr>
+													<td>01875</td>
+													<td>UX Study</td>
+													<td>Re-Research</td>
+													<td><button class="btn btn-success btn-sm pull-right">PAID
+															TODAY</button></td>
+													<td>$2,580</td>
+												</tr>
+												<tr>
+													<td>00369</td>
+													<td>Landing Page</td>
+													<td>Travelsimo</td>
+													<td><button class="btn btn-grayblue btn-sm pull-right">PAID
+															TODAY</button></td>
+													<td>$3,130</td>
+												</tr>
+												<tr>
+													<td>00689</td>
+													<td>iOS App Design</td>
+													<td>Silingo</td>
+													<td><button class="btn btn-grayblue btn-sm pull-right">PAID
+															TODAY</button></td>
+													<td>$3,130</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="tasks">
+									<div class="table-responsive">
+										<table class="table">
+											<h5>Tasks <small class="pull-right"><a href="#">View all tasks</a></small>
+											</h5>
+											<tbody>
+												<tr>
+													<td>
+														<div class="checkbox" id="check">
+															<label>
+																<input type="checkbox"> Create new prototype for the
+																landing page
+															</label>
+														</div>
+													</td>
+													<td><button class="btn btn-red btn-sm pull-right">DUE TODAY</button>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> Add new Google Analytics code to
+																all main files
+															</label>
+														</div>
+													</td>
+													<td><button class="btn btn-grayblue btn-sm pull-right">DUE IN 2 DAYS
+														</button></td>
+												</tr>
+												<tr>
+													<td>
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> Finish Dashboard UI Kit update
+															</label>
+														</div>
+													</td>
+													<td><button class="btn btn-grayblue btn-sm pull-right">DUE IN 3 DAYS
+														</button></td>
+												</tr>
+												<tr>
+													<td>
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> Update parallax scroll on team
+																page
+															</label>
+														</div>
+													</td>
+													<td><button class="btn btn-grayblue btn-sm pull-right">DUE IN 5 DAYS
+														</button></td>
+												</tr>
+												<tr>
+													<td>
+														<div class="checkbox">
+															<label>
+																<input type="checkbox"> Finish Dashboard UI Kit update
+															</label>
+														</div>
+													</td>
+													<td><button class="btn btn-grayblue btn-sm pull-right">DUE IN 1 WEEK
+														</button></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div-->
+					</div>
+				</div>
+				<!-- Performance -->
+				<!--div id="performance" class="tab-pane fade">
+					<div class="header">
+						<h4>Performance</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content">
+						<div class="row flex">
+							<div class="col-sm-2">
+								<div class="info-card">
+									<h3 class="text-center"><b>354</b> <br><small> CUSTOMERS</small></h3>
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="info-card">
+									<h3 class="text-center"><b>54%</b> <br><small> TARGET ACHIEVED</small></h3>
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="info-card">
+									<h3 class="text-center"><b>13%</b> <br><small> NEW SALES</small></h3>
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<div class="info-card">
+									<h3 class="text-center"><b>21</b> <br><small> NEW CUSTOMERS</small></h3>
+								</div>
+							</div>
+						</div>
+						<div class="row world">
+							<div class="col-sm-6">
+								<div class="world-card">
+									<h4>World Wide</h4>
+									<img src="https://bit.ly/2YP6nh6" alt="">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="product-card">
+									<h4>Product Sale</h4>
+									<div class="custom-progress">
+										<h6><i class="fa fa-circle-o fa-lg text-success"></i>Business for Newbies <small
+												class="pull-right">252</small></h6>
+										<div class="progress">
+											<div class="progress-bar progress-bar-success" role="progressbar"
+												aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+												style="width: 70%">
+												<span class="sr-only">70% Complete (success)</span>
+											</div>
+										</div>
+									</div>
+									<div class="custom-progress">
+										<h6><i class="fa fa-circle-o fa-lg text-warning"></i>Graph UI Kit <small
+												class="pull-right">300</small></h6>
+										<div class="progress">
+											<div class="progress-bar progress-bar-warning" role="progressbar"
+												aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+												style="width: 80%">
+												<span class="sr-only">80% Complete (warning)</span>
+											</div>
+										</div>
+									</div>
+									<div class="custom-progress">
+										<h6><i class="fa fa-circle-o fa-lg text-info"></i> iOS UI Kit <small
+												class="pull-right">149</small>
+										</h6>
+										<div class="progress">
+											<div class="progress-bar progress-bar-info" role="progressbar"
+												aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+												style="width: 40%">
+												<span class="sr-only">40% Complete (info)</span>
+											</div>
+										</div>
+									</div>
+									<div class="custom-progress">
+										<h6><i class="fa fa-circle-o fa-lg text-danger"></i>English Webinar <small
+												class="pull-right">98</small></h6>
+										<div class="progress">
+											<div class="progress-bar progress-bar-danger" role="progressbar"
+												aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"
+												style="width: 30%">
+												<span class="sr-only">30% Complete (danger)</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row stats">
+							<div class="col-sm-4">
+								<div class="stats-card sales">
+									<h4>Daily Sales
+										<small class="pull-right">552</small><br><br>
+										<small class="pull-right text-success">+16.2%</small><br>
+									</h4>
+									<img src="https://bit.ly/2TwueMn" alt="">
+									<hr>
+									<div class="row">
+										<div class="col-sm-6">
+											<h6>BEST DAY <small>21</small></h6>
+										</div>
+										<div class="col-sm-6 text-right">
+											<h6>AVERAGE <small>32</small></h6>
+										</div>
+									</div>
+									<hr>
+									<div class="row">
+										<div class="col-sm-10">
+											<h6>THIS MONTH</h6>
+											<div class="progress">
+												<div class="progress-bar progress-bar-warning" role="progressbar"
+													aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+													style="width: 60%">
+													<span class="sr-only">60% Complete (warning)</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-2">
+											<h4>21</h4>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-10">
+											<h6>LAST MONTH</h6>
+											<div class="progress">
+												<div class="progress-bar progress-bar-danger" role="progressbar"
+													aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+													style="width: 60%">
+													<span class="sr-only">60% Complete (warning)</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-2">
+											<h4>34</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="stats-card customers">
+									<h4>Customers
+										<small class="pull-right">354</small><br><br>
+										<small class="pull-right text-success">+16.2%</small><br>
+									</h4>
+									<img src="https://bit.ly/33uUStM" alt="">
+									<hr>
+									<div class="row">
+										<div class="col-sm-4">
+											<h6><i class="fa fa-circle-o text-warning"></i> New</h6>
+										</div>
+										<div class="col-sm-4">
+											<h6><i class="fa fa-circle-o text-primary"></i> Returning</h6>
+										</div>
+										<div class="col-sm-4">
+											<h6><i class="fa fa-circle-o text-success"></i> Referrals</h6>
+										</div>
+									</div>
+									<hr>
+									<div class="row p-bars">
+										<div class="col-sm-4">
+											<h6>39 <br><small>NEW</small></h6>
+											<div class="progress">
+												<div class="progress-bar progress-bar-warning" role="progressbar"
+													aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+													style="width: 60%">
+													<span class="sr-only">60% Complete (warning)</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<h6>54 <br><small>RETURNING</small></h6>
+											<div class="progress">
+												<div class="progress-bar progress-bar-info" role="progressbar"
+													aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+													style="width: 60%">
+													<span class="sr-only">60% Complete (info)</span>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<h6>54 <br><small>REFERRALS</small></h6>
+											<div class="progress">
+												<div class="progress-bar progress-bar-success" role="progressbar"
+													aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+													style="width: 60%">
+													<span class="sr-only">60% Complete (success)</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="stats-card profit">
+									<h4>Profit
+										<small class="pull-right">$1.435</small><br><br>
+										<small class="pull-right text-success">+16.2%</small><br>
+									</h4>
+									<img src="https://bit.ly/2H6pzMf" alt="">
+									<hr>
+									<div class="table-responsive">
+										<table class="table">
+											<tbody>
+												<tr>
+													<td width="60%"><i class="fa fa-circle-o text-danger"></i> Paypal
+													</td>
+													<td class="text-right">$365</td>
+													<td class="text-red text-right">18,7% <i
+															class="fa fa-angle-down"></i></td>
+												</tr>
+												<tr>
+													<td width="60%"><i class="fa fa-circle-o text-info"></i> Gumroad
+													</td>
+													<td class="text-right">$299</td>
+													<td class="text-success text-right">18,7% <i
+															class="fa fa-angle-up"></i></td>
+												</tr>
+												<tr>
+													<td width="60%"><i class="fa fa-circle-o text-success"></i> Others
+													</td>
+													<td class="text-right">$69 </td>
+													<td class="text-success text-right">18,7% <i
+															class="fa fa-angle-up"></i></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div-->
+				<!-- Analytics -->
+				<div id="analytics" class="tab-pane fade">
+					<div class="header">
+						<h4>Analytics</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content">
+						<div class="row">
+							<div class="col-sm-8">
+								<div class="revenue">
+									<h4>Ask a question?</h4>
+									<textarea name="question" placeholder="Ask me a question?" id="question" rows="12" cols="105"></textarea><br>
+									<button>Submit Question</button>
+								</div>
+							</div>
+							<div class="col-sm-4" style="margin-top: 5px;">
+								<div class="">
+									<div class="tasks">
+										<h4>You Question Stats</h4>
+										<div class="table-responsive">
+											<table class="table">
+												<tbody>
+													<tr>
+														<td>Questions Asked</td>
+														<td class="text-right">13</td>
+													</tr>
+													<tr>
+														<td>Questions Answered</td>
+														<td class="text-right">12</td>
+													</tr>
+													<tr>
+														<td>Unanswered Questions</td>
+														<td class="text-right">1</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<hr>
+										<br>
+										<h4>You Answer Stats</h4>
+										<div class="table-responsive">
+											<table class="table">
+												<tbody>
+													<tr>
+														<td>Questions Answered</td>
+														<td class="text-right">13</td>
+													</tr>
+													<tr>
+														<td>Answers Upvoted</td>
+														<td class="text-right">12</td>
+													</tr>
+													<tr>
+														<td>Answers Downvoted</td>
+														<td class="text-right">1</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--div class="row total-stats">
+							<div class="col-sm-3">
+								<div class="stats-card">
+									<span class="orange-chart">
+										<i class="fa fa-line-chart fa-lg"></i>
+									</span>
+									<h3>$9,587 <small><i class="fa fa-caret-up"></i></small><br>
+										<small>TOTAL PROFIT <b class="text-success">(+$286)</b></small>
+									</h3>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="stats-card">
+									<span class="purple-chart">
+										<i class="fa fa-pie-chart fa-lg"></i>
+									</span>
+									<h3>$2,190 <small><i class="fa fa-caret-up"></i></small><br>
+										<small>REVENUE <b class="text-success">(+$286)</b></small>
+									</h3>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="stats-card">
+									<span class="red-chart">
+										<i class="fa fa-pie-chart fa-lg"></i>
+									</span>
+									<h3>93 <small><i class="fa fa-caret-down"></i></small><br>
+										<small>ACTIVE CLIENTS <b class="text-red">(-2)</b></small>
+									</h3>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="stats-card">
+									<span class="green-chart">
+										<i class="fa fa-pie-chart fa-lg"></i>
+									</span>
+									<h3>$431 <small><i class="fa fa-caret-up"></i></small><br>
+										<small>PROFIT <b class="text-success"> (+$3.11)</b></small>
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="income-customers">
+									<div class="table-responsive">
+										<h4>Recent Income <small class="pull-right"><a href="#">View All</a></small>
+										</h4>
+										<table class="table">
+											<tbody>
+												<tr>
+													<td><img src="https://bit.ly/2Km1kf6" alt="" class="img-circle">
+													</td>
+													<td>Minnie Ferguson</td>
+													<td>One Page Dashboard</td>
+													<td>$150</td>
+													<td>3 Days ago</td>
+												</tr>
+												<tr>
+													<td><img src="https://bit.ly/2OWjYOV" alt="" class="img-circle">
+													</td>
+													<td>Ann Hunter</td>
+													<td>New Website </td>
+													<td>$150</td>
+													<td>3 Days ago</td>
+												</tr>
+												<tr>
+													<td><img src="https://bit.ly/31Fs8wF" alt="" class="img-circle">
+													</td>
+													<td>Wedding</td>
+													<td>New Website</td>
+													<td>$150</td>
+													<td>3 Days ago</td>
+												</tr>
+												<tr>
+													<td><img src="https://bit.ly/2Km1kf6" alt="" class="img-circle">
+													</td>
+													<td>Minnie Ferguson</td>
+													<td>One Page Dashboard</td>
+													<td>$150</td>
+													<td>3 Days ago</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="income-customers">
+									<div class="table-responsive">
+										<h4>Best Customers <small class="pull-right"><a href="#">View All</a></small>
+										</h4>
+										<table class="table">
+											<tbody>
+												<tr>
+													<td><img src="https://bit.ly/2Km1kf6" alt="" class="img-circle">
+													</td>
+													<td>Minnie Ferguson</td>
+													<td>One Page Dashboard</td>
+													<td>$150</td>
+													<td>3 Days ago</td>
+												</tr>
+												<tr>
+													<td><img src="https://bit.ly/2OWjYOV" alt="" class="img-circle">
+													</td>
+													<td>Ann Hunter</td>
+													<td>New Website </td>
+													<td>$150</td>
+													<td>3 Days ago</td>
+												</tr>
+												<tr>
+													<td><img src="https://bit.ly/31Fs8wF" alt="" class="img-circle">
+													</td>
+													<td>Wedding</td>
+													<td>New Website</td>
+													<td>$150</td>
+													<td>3 Days ago</td>
+												</tr>
+												<tr>
+													<td><img src="https://bit.ly/2Km1kf6" alt="" class="img-circle">
+													</td>
+													<td>Minnie Ferguson</td>
+													<td>One Page Dashboard</td>
+													<td>$150</td>
+													<td>3 Days ago</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div-->
+					</div>
+				</div>
+				<!-- Landing -->
+				<div id="landing" class="tab-pane fade">
+					<div class="header">
+						<h4>Welcome</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content">
+						<h3 class="text-center">
+							Hi there! Welcome to our Blogs. <br>
+							<!--small> Check out your past searches and the content you’ve browsed in. <a href="#">View	las	results</a></small-->
+						</h3>
+						<div class="row">
+							<div class="col-sm-4 text-center">
+								<div class="card-4">
+									<h4>Check our blogs on recent updates on guidelines from UGC.</h4>
+									<button class="btn btn-info">View Blogs</button>
+								</div>
+							</div>
+							<div class="col-sm-4 text-center">
+								<div class="card-4">
+									<h4>Our blogs on JEE Preparations, from the ones who cleared it successfuly.</h4>
+									<button class="btn btn-info">View Blogs</button>
+								</div>
+							</div>
+							<div class="col-sm-4 text-center">
+								<div class="card-4">
+									<h4>Read our blogs on why Boards are important.</h4>
+									<button class="btn btn-info">View Blogs</button>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<h3>Recommended for you.</h3>
+								<div class="card-6">
+									<div class="row">
+										<div class="col-sm-2">
+											<img style="height: 60px !important;" class="img-rounded" src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2020/04/28233938/Competitive-Exams-After-12th-Embibe.jpg">
+										</div>
+										<div class="col-sm-10">
+											<p> <strong>The Ultimate Guide for Competetive Examinations</strong><br>
+											<small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti soluta officia vitae, exercitationem dicta maiores atque autem.....
+											</small></p>
+										</div>
+										<div class="col-sm-2">
+											<img style="height: 60px !important;" class="img-rounded" src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2020/04/28233938/Competitive-Exams-After-12th-Embibe.jpg">
+										</div>
+										<div class="col-sm-10">
+											<p> <strong>The Ultimate Guide for Competetive Examinations</strong><br>
+											<small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti soluta officia vitae, exercitationem dicta maiores atque autem.....
+											</small></p>
+										</div>
+										<div class="col-sm-2">
+											<img style="height: 60px !important;" class="img-rounded" src="https://d2cyt36b7wnvt9.cloudfront.net/exams/wp-content/uploads/2020/04/28233938/Competitive-Exams-After-12th-Embibe.jpg">
+										</div>
+										<div class="col-sm-10">
+											<p> <strong>The Ultimate Guide for Competetive Examinations</strong><br>
+											<small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti soluta officia vitae, exercitationem dicta maiores atque autem.....
+											</small></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<h3>
+									Recently Viewed
+								</h3>
+								<div class="card-6">
+									<div class="table-responsive">
+										<table class="table">
+											<tbody>
+												<tr>
+													<td><img src="https://bit.ly/2N7po7n" class="img-rounded"></td>
+													<td><p><strong>Lorem Ipsum Dolor Sit Amet</strong><br>
+													Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore dignissimos adipisci non, natus fugit voluptates laudantium quam officiis beatae eveniet distinctio, animi et facere dolore magni obcaecati recusandae! Quos?</p></td>
+												</tr>
+												<tr>
+													<td><img src="https://bit.ly/2N7po7n" class="img-rounded"></td>
+													<td><p><strong>Lorem Ipsum Dolor Sit Amet</strong><br>
+													Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore dignissimos adipisci non, natus fugit voluptates laudantium quam officiis beatae eveniet distinctio, animi et facere dolore magni obcaecati recusandae! Quos?</p></td>
+												</tr>
+												<tr>
+													<td><img src="https://bit.ly/2N7po7n" class="img-rounded"></td>
+													<td><p><strong>Lorem Ipsum Dolor Sit Amet</strong><br>
+													Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur inventore dignissimos adipisci non, natus fugit voluptates laudantium quam officiis beatae eveniet distinctio, animi et facere dolore magni obcaecati recusandae! Quos?</p></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Projects -->
+				<div id="projects" class="tab-pane fade">
+					<div class="header">
+						<h4>Welcome</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content">
+						<div class="row">
+							<div class="col-sm-3">
+								<div class="card-3">
+									<h3><small>TEST UNLOCKED</small>
+										<span class="pull-right"><i class="fa fa-lock-open fa-2x"></i></span>
+										<br>25
+									</h3>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="card-3">
+									<h3><small>TESTS ATTEMPTED</small>
+										<span class="pull-right"><i class="fa fa-copy fa-2x"></i></span>
+										<br>18
+									</h3>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="card-3">
+									<h3><small>TESTS CLEARED</small>
+										<span class="pull-right"><i class="fa fa-sort-amount-up-alt fa-2x"></i></span>
+										<br>5
+									</h3>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="card-3">
+									<h3><small>TESTS FAILED</small>
+										<span class="pull-right"><i class="fa fa-sort-amount-down fa-2x"></i></span>
+										<br>2
+									</h3>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="responsive-table">
+								<h3>Recent Tests <small> 6 </small><i class="fa fa-concierge-bell pull-right"></i>
+								</h3>
+								<table class="table">
+									<thead>
+										<tr>
+											<th>Test Name</th>
+											<th>Test Date</th>
+											<th>Passing Marks</th>
+											<th>Passed Percentage</th>
+											<th>Your Result</th>
+											<th>Attendees</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="danger">
+											<td class="my-auto">MSAT Olympiad </td>
+											<td>26th June, 20
+											<td class="img-team">
+												<p>120</p>
+											</td>
+											<td>80%</td>
+											<td><i class="fa fa-check-circle text-green"></i>Cleared</td>
+											<td>560</td>
+										</tr>
+										<tr class="danger">
+											<td class="my-auto">NTSE Mock Test</td>
+											<td>29th June, 20
+											<td class="img-team">
+												<p>40</p>
+											</td>
+											<td>52%</td>
+											<td><i class="fa fa-check-circle text-green"></i>Cleared</td>
+											<td>1070</td>
+										</tr>
+										<tr class="danger">
+											<td class="my-auto">JEE Mains Mock Test - I</td>
+											<td>3rd July, 20
+											<td class="img-team">
+												<p>120</p>
+											</td>
+											<td>68%</td>
+											<td><i class="fa fa-check-circle text-red"></i>Not-cleared</td>
+											<td>6970</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- User Profile -->
+				<div id="user-profile" class="tab-pane fade in active">
+					<div class="header">
+						<h4>User Profile</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content">
+						<div class="row">
+							<div class="col-sm-7">
+								<div class="card-7">
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+										<li class="active"><a href="#activity" role="tab" data-toggle="tab">Activity</a>
+										</li>
+										<li><a href="#customerinvoices" role="tab" data-toggle="tab">Customer
+												Invoices</a></li>
+									</ul>
+									<!-- Tab panes -->
+									<div class="tab-content">
+										<div role="tabpanel" class="tab-pane active" id="activity">
+											<ul>
+												<small class="title">TODAY</small>
+												<li>
+													<h6>
+														Gerald Vaughn changed the status to QA on <b>MA-86 - Retargeting
+															Ads</b><br>
+														<span>I’ve prepared all sizes for you. Can you take a look
+															tonight so we can prepare my
+															final invoice?</span>
+														<small>New Dashboard Design - 9:24PM</small>
+													</h6>
+												</li>
+												<li>
+													<h6>
+														Gerald Vaughn commented on <b>DA-459 - Mediation: Demand Source
+															Logo Size</b><br>
+														<small>Portfolio Updates for Jason Carroll - 7:12PM</small>
+													</h6>
+												</li>
+												<li>
+													<h6>
+														Gerald Vaughn changed the status to QA on <b>MA-45 - Finish
+															Prototype</b><br>
+														<small>New Dashboard Design - 11:30AM</small>
+													</h6>
+												</li>
+											</ul>
+											<ul>
+												<small class="title">YESTERDAY</small>
+												<li>
+													<h6>
+														Gerald Vaughn attached 5 files to <b>9054 - Find good stocks for
+															our Instagram
+															channel</b><br>
+														<span class="imgs">
+															<img src="https://bit.ly/2yYgK2x"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2N7po7n"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2OXtcKC"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2yYgK2x"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2N7po7n"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2OXtcKC"
+																class="img-responsive img-rounded">
+														</span>
+														<small>Marketing Templates & Strategy - 7:59AM</small>
+													</h6>
+												</li>
+												<li>
+													<h6>
+														Gerald Vaughn commented on <b>Find good stocks for our Instagram
+															channel</b><br>
+														<span>What do you think about these? Should I continue in this
+															style?</span>
+														<small>Marketing Templates & Strategy - 7:58AM</small>
+													</h6>
+												</li>
+												<li>
+													<h6>
+														Gerald Vaughn changed the status to In Progress on <b>Find good
+															stocks for our Instagram
+															channel</b><br>
+														<small>Marketing Templates & Strategy - 6:30AM</small>
+													</h6>
+												</li>
+											</ul>
+											<ul>
+												<small class="title">28 JANUARY</small>
+												<li>
+													<h6>
+														Gerald Vaughn attached 6 files to <b>1007 - Background
+															Inspiration</b><br>
+														<span class="imgs">
+															<img src="https://bit.ly/2yYgK2x"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2N7po7n"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2OXtcKC"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2yYgK2x"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2N7po7n"
+																class="img-responsive img-rounded">
+															<img src="https://bit.ly/2OXtcKC"
+																class="img-responsive img-rounded">
+														</span>
+														<small>Templates & Inspiration - 11:50AM</small>
+													</h6>
+												</li>
+											</ul>
+										</div>
+										<!--div role="tabpanel" class="tab-pane" id="blockedusers">
+											<h4>Blocked users</h4>
+											<hr>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quidem modi
+												atque at aliquid
+												expedita nemo incidunt exercitationem nihil sit. Laudantium suscipit id
+												amet saepe ratione,
+												accusamus. Voluptatum in, nam.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptate
+												nobis tenetur mollitia
+												incidunt quod, est veniam, earum nemo! Alias rerum saepe aut sapiente
+												minus sunt doloribus
+												tempora corrupti in!</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea distinctio
+												nostrum molestias
+												assumenda, repudiandae consequuntur quae pariatur aut incidunt placeat
+												doloremque doloribus!
+												Recusandae nostrum dolore repudiandae libero mollitia, rem eveniet.</p>
+										</div>
+										<div role="tabpanel" class="tab-pane" id="nda">
+											<h4>NDA</h4>
+											<hr>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quidem modi
+												atque at aliquid
+												expedita nemo incidunt exercitationem nihil sit. Laudantium suscipit id
+												amet saepe ratione,
+												accusamus. Voluptatum in, nam.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptate
+												nobis tenetur mollitia
+												incidunt quod, est veniam, earum nemo! Alias rerum saepe aut sapiente
+												minus sunt doloribus
+												tempora corrupti in!</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea distinctio
+												nostrum molestias
+												assumenda, repudiandae consequuntur quae pariatur aut incidunt placeat
+												doloremque doloribus!
+												Recusandae nostrum dolore repudiandae libero mollitia, rem eveniet.</p>
+										</div-->
+										<div role="tabpanel" class="tab-pane" id="customerinvoices">
+											<h4>Customer Invoices</h4>
+											<hr>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quidem modi
+												atque at aliquid
+												expedita nemo incidunt exercitationem nihil sit. Laudantium suscipit id
+												amet saepe ratione,
+												accusamus. Voluptatum in, nam.</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptate
+												nobis tenetur mollitia
+												incidunt quod, est veniam, earum nemo! Alias rerum saepe aut sapiente
+												minus sunt doloribus
+												tempora corrupti in!</p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea distinctio
+												nostrum molestias
+												assumenda, repudiandae consequuntur quae pariatur aut incidunt placeat
+												doloremque doloribus!
+												Recusandae nostrum dolore repudiandae libero mollitia, rem eveniet.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-5">
+								<div class="card-5">
+									<div class="profile">
+										<img src="https://bit.ly/2MoguT5" class="img-circle">
+										<h4>Useer
+											<small>Student</small>
+											<small>Hyderabad, India</small>
+										</h4>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<button class="btn btn-primary btn-block">Edit Profile</button>
+										</div>
+										<div class="col-sm-6">
+											<button class="btn btn-default btn-block">Change Password</button>
+										</div>
+									</div><br>
+									<hr>
+									<div class="row dtls">
+										<div class="col-sm-4 text-center">
+											<h5>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<!--i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i-->
+												<br>
+												<small>COURSES</small>
+											</h5>
+										</div>
+										<div class="col-sm-4 text-center">
+											<h5>
+												15<br>
+												<small>TESTS PASSED</small>
+											</h5>
+										</div>
+										<div class="col-sm-4 text-center">
+											<h5>
+												24<br>
+												<small>TESTS ATTEMPTED</small>
+											</h5>
+										</div>
+										<!--div class="col-sm-4 text-center">
+											<h5>
+												186<br>
+												<small>FINISHED GIGS</small>
+											</h5>
+										</div-->
+									</div>
+									<hr>
+									<div class="fb">
+										<span class="pull-left"><i class="fa fa-pencil fa-lg text-primary"></i></span>
+										<h5>NTSE<br><small>Facebook - Hyderabad, India</small></h5>
+									</div>
+									<div class="drop">
+										<span class="pull-left"><i class="fa fa-dropbox fa-lg text-primary"></i></span>
+										<h5>ICSE Boards Crash Course<br><small>Dropbox - Hyderabad, India</small></h5>
+									</div>
+									<!--hr>
+									<div class="link text-center">
+										<a href="https://codepen.io/srees-evd" target="_blank"><i
+												class="fa fa-globe"></i>
+											https://codepen.io/srees-evd</a>
+									</div-->
+								</div>
+								<!--div class="card-5 billing">
+									<h4>Billing</h4>
+									<div class="row billing-row">
+										<div class="col-sm-6"><i class="fa fa-credit-card"></i> Ending **** 5896</div>
+										<div class="col-sm-3 text-right">05 / 19 </div>
+										<div class="col-sm-3 text-right text-gray">VISA</div>
+									</div>
+									<hr>
+									<div class="table-responsive">
+										<table class="table">
+											<tbody>
+												<tr>
+													<td>PRO Package</td>
+													<td>Standard Payment</td>
+													<td>19 Jan 2018</td>
+												</tr>
+												<tr>
+													<td>Job Posted</td>
+													<td>30-Days Recuring</td>
+													<td>24 Nov 2017</td>
+												</tr>
+												<tr>
+													<td>PRO Package </td>
+													<td>Gift</td>
+													<td>7 Mar 2017</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Candidates -->
+				<div id="candidates" class="tab-pane fade">
+					<div class="header">
+						<h4>Candidates</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content">
+						<div class="row">
+							<div class="col-sm-4 candid-card">
+								<div class="card-4">
+									<img src="https://bit.ly/2Z2Rhol" class="img-responsive main-img" />
+									<div class="row">
+										<div class="col-sm-10">
+											<img src="https://bit.ly/2OWjYOV"
+												class="img-responsive img-circle img-thumbnail pull-left">
+											<h5>Mathilda Campbell <br><small><i class="fa fa-map-marker"></i>
+													India</small></h5>
+										</div>
+										<div class="col-sm-2 text-right">
+											<a href="#"><i class="fa fa-trash-o fa-lg"></i></a>
+											<a href="#"><i class="fa fa-cog fa-lg"></i></a>
+										</div>
+									</div>
+									<hr>
+									<div class="row text-center py-15">
+										<div class="col-sm-6">
+											<button class="btn btn-primary btn-block"><i class="fa fa-envelope"></i> New
+												Message</button>
+										</div>
+										<div class="col-sm-6 text-green">
+											<small class="mt-5"><i class="fa fa-check"></i> Available for Hire</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 candid-card">
+								<div class="card-4">
+									<img src="https://bit.ly/2TCl1lG" class="img-responsive main-img" />
+									<div class="row">
+										<div class="col-sm-10">
+											<img src="https://bit.ly/2Z9sZUH"
+												class="img-responsive img-circle img-thumbnail pull-left">
+											<h5>Mathilda Campbell <br><small><i class="fa fa-map-marker"></i>
+													India</small></h5>
+										</div>
+										<div class="col-sm-2 text-right">
+											<a href="#"><i class="fa fa-trash-o fa-lg"></i></a>
+											<a href="#"><i class="fa fa-cog fa-lg"></i></a>
+										</div>
+									</div>
+									<hr>
+									<div class="row text-center py-15">
+										<div class="col-sm-6">
+											<button class="btn btn-primary btn-block"><i class="fa fa-envelope"></i> New
+												Message</button>
+										</div>
+										<div class="col-sm-6 text-green">
+											<small class="mt-5"><i class="fa fa-check"></i> Available for Hire</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 candid-card">
+								<div class="card-4">
+									<img src="https://bit.ly/2Z6stLb" class="img-responsive main-img" />
+									<div class="row">
+										<div class="col-sm-10">
+											<img src="https://bit.ly/2Z4W1cd"
+												class="img-responsive img-circle img-thumbnail pull-left">
+											<h5>Mathilda Campbell <br><small><i class="fa fa-map-marker"></i>
+													India</small></h5>
+										</div>
+										<div class="col-sm-2 text-right">
+											<a href="#"><i class="fa fa-trash-o fa-lg"></i></a>
+											<a href="#"><i class="fa fa-cog fa-lg"></i></a>
+										</div>
+									</div>
+									<hr>
+									<div class="row text-center py-15">
+										<div class="col-sm-6">
+											<button class="btn btn-primary btn-block"><i class="fa fa-envelope"></i> New
+												Message</button>
+										</div>
+										<div class="col-sm-6 text-green">
+											<small class="mt-5"><i class="fa fa-check"></i> Available for Hire</small>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-4 candid-card">
+								<div class="card-4">
+									<img src="https://bit.ly/30evAhw" class="img-responsive main-img" />
+									<div class="row">
+										<div class="col-sm-10">
+											<img src="https://bit.ly/2KP3DX7"
+												class="img-responsive img-circle img-thumbnail pull-left">
+											<h5>Mathilda Campbell <br><small><i class="fa fa-map-marker"></i>
+													India</small></h5>
+										</div>
+										<div class="col-sm-2 text-right">
+											<a href="#"><i class="fa fa-trash-o fa-lg"></i></a>
+											<a href="#"><i class="fa fa-cog fa-lg"></i></a>
+										</div>
+									</div>
+									<hr>
+									<div class="row text-center py-15">
+										<div class="col-sm-6">
+											<button class="btn btn-primary btn-block"><i class="fa fa-envelope"></i> New
+												Message</button>
+										</div>
+										<div class="col-sm-6 text-green">
+											<small class="mt-5"><i class="fa fa-check"></i> Available for Hire</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 candid-card">
+								<div class="card-4">
+									<img src="https://bit.ly/2KQ3se3" class="img-responsive main-img" />
+									<div class="row">
+										<div class="col-sm-10">
+											<img src="https://bit.ly/2ZjhWMZ"
+												class="img-responsive img-circle img-thumbnail pull-left">
+											<h5>Mathilda Campbell <br><small><i class="fa fa-map-marker"></i>
+													India</small></h5>
+										</div>
+										<div class="col-sm-2 text-right">
+											<a href="#"><i class="fa fa-trash-o fa-lg"></i></a>
+											<a href="#"><i class="fa fa-cog fa-lg"></i></a>
+										</div>
+									</div>
+									<hr>
+									<div class="row text-center py-15">
+										<div class="col-sm-6">
+											<button class="btn btn-primary btn-block"><i class="fa fa-envelope"></i> New
+												Message</button>
+										</div>
+										<div class="col-sm-6 text-green">
+											<small class="mt-5"><i class="fa fa-check"></i> Available for Hire</small>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 candid-card">
+								<div class="card-4">
+									<img src="https://bit.ly/33JBVUr" class="img-responsive main-img" />
+									<div class="row">
+										<div class="col-sm-10">
+											<img src="https://bit.ly/2YSiUjI"
+												class="img-responsive img-circle img-thumbnail pull-left">
+											<h5>Mathilda Campbell <br><small><i class="fa fa-map-marker"></i>
+													India</small></h5>
+										</div>
+										<div class="col-sm-2 text-right">
+											<a href="#"><i class="fa fa-trash-o fa-lg"></i></a>
+											<a href="#"><i class="fa fa-cog fa-lg"></i></a>
+										</div>
+									</div>
+									<hr>
+									<div class="row text-center py-15">
+										<div class="col-sm-6">
+											<button class="btn btn-primary btn-block"><i class="fa fa-envelope"></i> New
+												Message</button>
+										</div>
+										<div class="col-sm-6 text-green">
+											<small class="mt-5"><i class="fa fa-check"></i> Available for Hire</small>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Invoices -->
+				<!--div id="invoices" class="tab-pane fade">
+					<div class="header">
+						<h4>Invoices</h4>
+						<ul class="pull-right">
+							<li><button class="btn btn-success"><small>New Invoice</small></button></li>
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content">
+						<div class="row invoice">
+							<div class="col-sm-8">
+								<div class="summary-card">
+									<h5>Monthly Summary <br><small>February 2017 (12 Days Remaining)</small></h5>
+									<div class="dropdown pull-right">
+										<i class="fa fa-ellipsis-h" id="dLabel" type="button" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false"></i>
+										<ul class="dropdown-menu">
+											<li><a href="#">Link 1</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">Link 2</a></li>
+										</ul>
+									</div>
+									<div class="row">
+										<div class="col-sm-4">
+											<h3>
+												<small>INVOICED</small><br><br>
+												$2,190 <small class="bg-cir"><i class="fa fa-caret-up"></i></small><br>
+												<small>LAST MONTH: $2,890</small>
+											</h3>
+										</div>
+										<div class="col-sm-4">
+											<h3>
+												<small>PROFIT</small><br><br>
+												$2,190 <small class="bg-cir"><i
+														class="fa fa-caret-down"></i></small><br>
+												<small>LAST MONTH: $2,890</small>
+											</h3>
+										</div>
+										<div class="col-sm-4">
+											<h3>
+												<small>EXPENSES</small><br><br>
+												$2,190 <small class="bg-cir"><i class="fa fa-caret-up"></i></small><br>
+												<small>LAST MONTH: $2,890</small>
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="summary-card">
+									<h5>Percentual Profit <br><small>Quarterly (3 Months) </small></h5>
+									<div class="dropdown pull-right">
+										<i class="fa fa-ellipsis-h" id="dLabel" type="button" data-toggle="dropdown"
+											aria-haspopup="true" aria-expanded="false"></i>
+										<ul class="dropdown-menu">
+											<li><a href="#">Link 1</a></li>
+											<li role="separator" class="divider"></li>
+											<li><a href="#">Link 2</a></li>
+										</ul>
+									</div>
+									<img src="https://bit.ly/2KHf3xn" class="img-responsive cust-img">
+								</div>
+							</div>
+						</div>
+						<div class="row table-invoice">
+							<div class="col-sm-12">
+								<div class="table-in-card">
+									<h3>Invoices</h3>
+									<hr>
+									<table class="table">
+										<thead>
+											<tr>
+												<th>No.</th>
+												<th>Invoice Subject</th>
+												<th>Client</th>
+												<th>VAT No.</th>
+												<th>Created</th>
+												<th>Status</th>
+												<th>Price</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>00450</td>
+												<td>Design Works</td>
+												<td>Carlson Limited</td>
+												<td>87956621</td>
+												<td>15 Aug 2019</td>
+												<td>
+													<button class="btn btn-success btn-xs"><small>PAID</small></button>
+												</td>
+												<td>$887</td>
+												<td>
+													<button class="btn btn-primary"><small>MANAGE</small></button>
+												</td>
+												<td>
+													<div class="btn-group">
+														<button type="button" class="btn btn-default">Actions</button>
+														<button type="button" class="btn btn-default dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															<span class="caret"></span>
+															<span class="sr-only">Toggle Dropdown</span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a href="#">Complete</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Share</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Archieve</a></li>
+														</ul>
+													</div>
+												</td>
+												<td><a href="#"><i class="fa fa-cloud-download fa-lg"></i></a></td>
+											</tr>
+											<tr>
+												<td>00450</td>
+												<td>UX Wireframes</td>
+												<td>Adobe</td>
+												<td>87956621</td>
+												<td>12 Aug 2019</td>
+												<td>
+													<button
+														class="btn btn-warning btn-xs"><small>PENDING</small></button>
+												</td>
+												<td>$1200</td>
+												<td>
+													<button class="btn btn-primary"><small>MANAGE</small></button>
+												</td>
+												<td>
+													<div class="btn-group">
+														<button type="button" class="btn btn-default">Actions</button>
+														<button type="button" class="btn btn-default dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															<span class="caret"></span>
+															<span class="sr-only">Toggle Dropdown</span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a href="#">Complete</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Share</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Archieve</a></li>
+														</ul>
+													</div>
+												</td>
+												<td><a href="#"><i class="fa fa-cloud-download fa-lg"></i></a></td>
+											</tr>
+											<tr>
+												<td>00452</td>
+												<td>New Dashboard</td>
+												<td>Bluewolf</td>
+												<td>87956621</td>
+												<td>15 Aug 2019</td>
+												<td>
+													<button
+														class="btn btn-warning btn-xs"><small>PENDING</small></button>
+												</td>
+												<td>$534</td>
+												<td>
+													<button class="btn btn-primary"><small>MANAGE</small></button>
+												</td>
+												<td>
+													<div class="btn-group">
+														<button type="button" class="btn btn-default">Actions</button>
+														<button type="button" class="btn btn-default dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															<span class="caret"></span>
+															<span class="sr-only">Toggle Dropdown</span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a href="#">Complete</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Share</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Archieve</a></li>
+														</ul>
+													</div>
+												</td>
+												<td><a href="#"><i class="fa fa-cloud-download fa-lg"></i></a></td>
+											</tr>
+											<tr>
+												<td>00453</td>
+												<td>Landing Page</td>
+												<td>Salesforce</td>
+												<td>87956621</td>
+												<td>12 Aug 2019</td>
+												<td>
+													<button class="btn btn-grayblue btn-xs"><small class="large">DUE IN
+															2 WEEKS</small></button>
+												</td>
+												<td>$1500</td>
+												<td>
+													<button class="btn btn-primary"><small>MANAGE</small></button>
+												</td>
+												<td>
+													<div class="btn-group">
+														<button type="button" class="btn btn-default">Actions</button>
+														<button type="button" class="btn btn-default dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															<span class="caret"></span>
+															<span class="sr-only">Toggle Dropdown</span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a href="#">Complete</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Share</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Archieve</a></li>
+														</ul>
+													</div>
+												</td>
+												<td><a href="#"><i class="fa fa-cloud-download fa-lg"></i></a></td>
+											</tr>
+											<tr>
+												<td>00454</td>
+												<td>Marketing Templates </td>
+												<td>Printic</td>
+												<td>87956621</td>
+												<td>15 Aug 2019</td>
+												<td>
+													<button class="btn btn-danger btn-xs"><small>PAID
+															TODAY</small></button>
+												</td>
+												<td>$887</td>
+												<td>
+													<button class="btn btn-primary"><small>MANAGE</small></button>
+												</td>
+												<td>
+													<div class="btn-group">
+														<button type="button" class="btn btn-default">Actions</button>
+														<button type="button" class="btn btn-default dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															<span class="caret"></span>
+															<span class="sr-only">Toggle Dropdown</span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a href="#">Complete</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Share</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Archieve</a></li>
+														</ul>
+													</div>
+												</td>
+												<td><a href="#"><i class="fa fa-cloud-download fa-lg"></i></a></td>
+											</tr>
+											<tr>
+												<td>00450</td>
+												<td>UX Wireframes</td>
+												<td>Adobe</td>
+												<td>87956621</td>
+												<td>12 Aug 2019</td>
+												<td>
+													<button
+														class="btn btn-warning btn-xs"><small>PENDING</small></button>
+												</td>
+												<td>$1200</td>
+												<td>
+													<button class="btn btn-primary"><small>MANAGE</small></button>
+												</td>
+												<td>
+													<div class="btn-group">
+														<button type="button" class="btn btn-default">Actions</button>
+														<button type="button" class="btn btn-default dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															<span class="caret"></span>
+															<span class="sr-only">Toggle Dropdown</span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a href="#">Complete</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Share</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Archieve</a></li>
+														</ul>
+													</div>
+												</td>
+												<td><a href="#"><i class="fa fa-cloud-download fa-lg"></i></a></td>
+											</tr>
+											<tr>
+												<td>00450</td>
+												<td>Design Works</td>
+												<td>Carlson Limited</td>
+												<td>87956621</td>
+												<td>15 Aug 2019</td>
+												<td>
+													<button class="btn btn-success btn-xs"><small>PAID</small></button>
+												</td>
+												<td>$887</td>
+												<td>
+													<button class="btn btn-primary"><small>MANAGE</small></button>
+												</td>
+												<td>
+													<div class="btn-group">
+														<button type="button" class="btn btn-default">Actions</button>
+														<button type="button" class="btn btn-default dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															<span class="caret"></span>
+															<span class="sr-only">Toggle Dropdown</span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a href="#">Complete</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Share</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Archieve</a></li>
+														</ul>
+													</div>
+												</td>
+												<td><a href="#"><i class="fa fa-cloud-download fa-lg"></i></a></td>
+											</tr>
+											<tr>
+												<td>00450</td>
+												<td>UX Wireframes</td>
+												<td>Adobe</td>
+												<td>87956621</td>
+												<td>12 Aug 2019</td>
+												<td>
+													<button
+														class="btn btn-warning btn-xs"><small>PENDING</small></button>
+												</td>
+												<td>$1200</td>
+												<td>
+													<button class="btn btn-primary"><small>MANAGE</small></button>
+												</td>
+												<td>
+													<div class="btn-group">
+														<button type="button" class="btn btn-default">Actions</button>
+														<button type="button" class="btn btn-default dropdown-toggle"
+															data-toggle="dropdown" aria-haspopup="true"
+															aria-expanded="false">
+															<span class="caret"></span>
+															<span class="sr-only">Toggle Dropdown</span>
+														</button>
+														<ul class="dropdown-menu">
+															<li><a href="#">Complete</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Share</a></li>
+															<li role="separator" class="divider"></li>
+															<li><a href="#">Archieve</a></li>
+														</ul>
+													</div>
+												</td>
+												<td><a href="#"><i class="fa fa-cloud-download fa-lg"></i></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div-->
+				<!-- Single Invoice -->
+				<div id="single-invoice" class="tab-pane fade faq">
+					<div class="header">
+						<h4>FAQ's</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="content center">
+						<div class="container" style="background-color: #fefefe; min-height: 80%; height: fit-content; width: 90%; margin-top: 30px;">
+							<div class="row">
+								<div class="col-sm-8">
+									<p><strong>Q1</strong> How does the teaching work? <br>
+									<small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quam sit tenetur, aliquam, obcaecati doloribus veritatis, officia voluptate necessitatibus esse nisi facere totam pariatur tempore iusto illo hic voluptatem sapiente.</small></p>
+									<p><strong>Q2</strong> Random Question 2 <br>
+									<small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aperiam possimus magni temporibus ut, velit ad quas, ea repellat perspiciatis cupiditate debitis totam ullam architecto animi sint necessitatibus iste libero.</small></p>
+									<p><strong>Q3</strong> Random Question 3 <br>
+									<small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aperiam possimus magni temporibus ut, velit ad quas, ea repellat perspiciatis cupiditate debitis totam ullam architecto animi sint necessitatibus iste libero.</small></p>	
+								</div>
+								<div class="col-sm-4 center" style="min-height: 80% !important; height: fit-content;">
+									<h4><strong>Important Links</strong></h4>
+									<ul>
+										<li><a href="#">How are we different than other Ed-Tech brands?</a></li>
+										<li><a href="#">How we recommend you blogs?</a></li>
+										<li><a href="#">What we do with your data?</a></li>
+										<li><a href="#">Terms & Conditions</a></li>
+										<li><a href="#">Privacy Policy</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--div class="content">
+						<div class="container">
+							<div class="s-inv-card">
+								<div class="row">
+									<div class="s-inv-header">
+										<div class="col-sm-9">
+											<h3><i class="fa fa-ravelry fa-lg text-green"></i><br><br><b> MyDashboard
+													Pvt Ltd</b></h3>
+										</div>
+										<div class="col-sm-3">
+											<h4><b> Invoice</b> <br> <small> 22 July 2019</small></h4>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="s-inv-details">
+										<div class="col-sm-9">
+											<h4>
+												<small>From:</small><br>
+												<b>Dashboard Inc</b> <br><br>
+												<small>
+													39 MIJ Road,<br>
+													Jubilee Hills, Hyderabad <br>
+													India
+												</small>
+											</h4>
+										</div>
+										<div class="col-sm-3">
+											<h4>
+												<small>To:</small><br>
+												<b>Client Inc</b> <br><br>
+												<small>
+													248 Blooms Ave,<br>
+													PVLC, Shamshabad<br>
+													India
+												</small>
+											</h4>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="s-inv-body">
+										<div class="col-sm-3">
+											<h4><b> Invoice#</b> <br><small>ASLF 674323</small></h4>
+										</div>
+										<div class="col-sm-9">
+											<div class="table-responsive">
+												<table class="table">
+													<thead>
+														<tr>
+															<th>Description</th>
+															<th>Qty</th>
+															<th>Price</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Website Design</td>
+															<td>2</td>
+															<td>$4,500</td>
+														</tr>
+														<tr>
+															<td>UI Development</td>
+															<td>3</td>
+															<td>$7,500</td>
+														</tr>
+														<tr>
+															<td>Landing Page</td>
+															<td>1</td>
+															<td>$2,320</td>
+														</tr>
+													</tbody>
+													<tfoot>
+														<tr>
+															<th>Total</th>
+															<th></th>
+															<th>$15,490</th>
+														</tr>
+													</tfoot>
+												</table>
+												<small class="text-muted">All amounts shown on this invoice are in US
+													dollars.</small>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="s-inv-footer">
+										<div class="col-sm-9"><i class="fa fa-ravelry fa-lg text-green"></i> MyDashboard
+											UI</div>
+										<div class="col-sm-3">hello@mydashboard.in</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div-->
+				</div>
+				<!-- Browse -->
+				<div id="browse" class="tab-pane fade">
+					<div class="header">
+						<h4>Browse</h4>
+						<ul class="pull-right">
+							<li>
+								<div class="btn-group dropleft dropdown-user">
+									<i class="fa fa-user-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2KkoqCO"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2MH8Wue"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<img src="https://bit.ly/2Km1kf6"
+														class="img-circle img-responvie" />
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-alert">
+									<i class="fa fa-bell-o dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+										aria-expanded="false">
+									</i>
+									<ul class="dropdown-menu">
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-check-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-calendar fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="alert-card">
+													<i class="fa fa-info-circle fa-2x"></i>
+													<p class="pull-right">
+														Someone mentioned you <br>
+														<small>You have recieved a mention on twitter, check it
+															out!</small>
+													</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<div class="btn-group dropleft dropdown-avatar">
+									<img src="https://bit.ly/2Km1kf6" class="img-circle img-responvie" /><i
+										class="fa fa-angle-down dropdown-toggle" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false"></i>
+									<ul class="dropdown-menu">
+										<li><a href="#">Edit Profile</a></li>
+										<li><a href="#">View Activity</a></li>
+										<li><a href="#">Manage Roles</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<h5 class="search">Search Results: <b>Nature Shots</b> <small>21 People match your criteria</small>
+					</h5>
+					<div class="content">
+						<div class="container browse">
+							<div class="row">
+								<div class="col-sm-4">
+									<!--                 <div class="card">
+                  <img src="https://bit.ly/2ZLHm1W" alt="" class="img-responsive img-circle img-thumbnail">
+                  <h5>Caroline Higgins <br>
+                    <small> Traveller<br>5 Projects | 41 Stocks</small>
+                    <small>
+                      <i class="fa fa-envelope"></i>
+                      <i class="fa fa-ellipsis-h"></i>
+                    </small>
+                  </h5>
+                </div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- partial -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
+	<script src='https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+	<script src="./script.js"></script>
+</body>
+
+</html>
