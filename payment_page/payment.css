@@ -1,0 +1,177 @@
+body{
+  overflow-x: hidden;
+}
+.logo-image{
+    display:flex;
+    justify-content: center;
+    background: #FFA6A6;
+    background: -webkit-radial-gradient(bottom right, #FFA6A6, #CCBEFF);
+    background: -moz-radial-gradient(bottom right, #FFA6A6, #CCBEFF);
+    background: radial-gradient(to top left, #FFA6A6, #CCBEFF);
+    height:100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.left-class{
+  padding-left: 20px;
+}
+.div1{
+    font-family: 'Nunito', sans-serif;
+    font-size:50px ;
+    
+}
+#text-gate{
+    font-weight: bolder;
+    font-size:50px ;
+    text-decoration: none;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 10px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 10px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn-edit {
+  background: #FFA6A6;
+  background: -webkit-radial-gradient(bottom right, #FFA6A6, #CCBEFF);
+  background: -moz-radial-gradient(bottom right, #FFA6A6, #CCBEFF);
+  background: radial-gradient(to top left, #FFA6A6, #CCBEFF);;
+  color: black;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn-edit:hover {
+  background: #3ae040;
+}
+
+.right-class a {
+  color: #cf397f;
+}
+.right-class a:hover {
+  text-decoration: none;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+.right-class{
+  padding-right: 20px;
+  padding-left: 5px;
+}
+
+@media (max-width: 600px) {
+  body{
+    align-items: center;
+  }
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+  .left-class{
+    padding-left: 5px;
+}
+  .div1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    font-size:30px ;
+    
+}
+#text-gate{
+    font-weight: bolder;
+    font-size:30px ;
+}
+.logo-image{
+  display:flex;
+  justify-content: center;
+  background: #FFA6A6;
+  background: -webkit-radial-gradient(bottom right, #FFA6A6, #CCBEFF);
+  background: -moz-radial-gradient(bottom right, #FFA6A6, #CCBEFF);
+  background: radial-gradient(to top left, #FFA6A6, #CCBEFF);
+  height:100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  padding: 0%;
+}
+
+
+.btn-edit {
+  background: #FFA6A6;
+  background: -webkit-radial-gradient(bottom right, #FFA6A6, #CCBEFF);
+  background: -moz-radial-gradient(bottom right, #FFA6A6, #CCBEFF);
+  background: radial-gradient(to top left, #FFA6A6, #CCBEFF);;
+  color: black;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn-edit:hover {
+  background: #3ae040;
+}}
